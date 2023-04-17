@@ -1,0 +1,7 @@
+services:
+  eater:
+    build: 
+      dockerfile: Dockerfile.dev
+      context: .
+    volumes:
+      - .:/app
