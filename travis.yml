@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t pcaly626/eater -f Dockerfile.dev .
+
+script:
+  - docker run pcaly626/eater python main.py

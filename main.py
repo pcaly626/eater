@@ -26,7 +26,8 @@ if __name__ == '__main__':
 
     hungery_eaters = list()
     remove_eater = None
-    while True:
+    result = False
+    while not result:
         if random.randint(0, 100) > 90:
             eater = random.choice(eaters)
             if not eater.hungry:
@@ -48,5 +49,5 @@ if __name__ == '__main__':
                     remove_index = index
                     remove_eater = None
             hungery_eaters.pop(remove_index)
+            result = True
         time.sleep(1)
-
