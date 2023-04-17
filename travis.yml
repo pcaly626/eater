@@ -6,4 +6,4 @@ before_install:
   - docker build -t pcaly626/eater -f Dockerfile.dev .
 
 script:
-  - docker run pcaly626/eater python main.py
+  - docker run -e CI=true pcaly626/eater python main.py
